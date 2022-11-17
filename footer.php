@@ -11,24 +11,28 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'start' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'start' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'start' ), 'start', '<a href="http://nemolite.ru/">Sergey Vushnyakov</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer>
+		<div class="footer-content">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+					<div class="footer-content-left">
+						<p>Сайт веб-разработчика и программиста</p>
+					</div>	
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-7 col-lg-7">
+					<div class="footer-content-middle">
+						<p>Разделы сайта или облако тегов</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+					<div class="footer-content-right">
+						<p>Контактная информация, социальные сети, канал</p>
+					</div>
 
+				</div>
+			  </div>
+		</div>
+	</footer>
 <?php wp_footer(); ?>
-
 </body>
 </html>

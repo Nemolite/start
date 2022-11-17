@@ -19,41 +19,80 @@
 
 	<?php wp_head(); ?>
 </head>
+<body>
+<header>
+		<div class="header-content navbar-fixed-top">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+				  <!-- Brand and toggle get grouped for better mobile display -->
+				  <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					  <span class="sr-only">Toggle navigation</span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand cst-brand" href="#">nemolite</a>
+				  </div>
+			  
+				  <!-- Collect the nav links, forms, and other content for toggling -->
+				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!-- PHP -->
+					<ul class="nav navbar-nav">					  					  
+					  <li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PHP<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						  <li><a href="#">PHP</a></li>						  
+						  <li role="separator" class="divider"></li>
+						  <li><a href="#">WordPress</a></li>
+						  <li role="separator" class="divider"></li>
+						  <li><a href="#">Laravel</a></li>
+						</ul>
+					  </li>
+					</ul>
+					
+					<!-- Python -->
+					<ul class="nav navbar-nav">					  					  
+						<li class="dropdown">
+						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Python<span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="#">Python</a></li>							
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Django</a></li>
+							
+						  </ul>
+						</li>
+					  </ul>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'start' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$start_description = get_bloginfo( 'description', 'display' );
-			if ( $start_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $start_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'start' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+					<!-- Аутентификация -->
+					<ul class="nav navbar-nav navbar-right">	  
+					  <li class="dropdown">
+						<a href="#" 
+						   class="dropdown-toggle" 
+						   data-toggle="dropdown" 
+						   role="button" 
+						   aria-haspopup="true" 
+						   aria-expanded="false">Аутентификация<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+						  <li><a href="#">Вход</a></li>
+						  <li><a href="#">Регистрация</a></li>						  
+						  <li role="separator" class="divider"></li>
+						  <li><a href="#">Если вы забыли пароль?</a></li>
+						</ul>
+					  </li>
+					</ul>
+					
+						<!-- Поиск -->
+						<form class="navbar-form navbar-right">
+							<div class="form-group">
+							<input type="text" class="form-control" placeholder="Что искать?">
+							</div>
+							<button type="submit" class="btn btn-default">Поиск по сайту</button>
+						</form>	
+				  </div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			  </nav>
+			
+		</div>
+	</header>
