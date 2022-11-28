@@ -17,7 +17,14 @@ get_header();
 <div class="main">
 		<div class="row">
 			<div class="col-sm-4 col-md-3 col-lg-3">
+                
 				<div class="sidebar">
+                    <h3>Мой личный блок</h3>                                    
+                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri();?>/assets/images/avatar.jpg" alt="">
+                    <p class="nickname">Sergey Vushnyakov</p>
+                    <p class="fio">Программист, веб-разработчик</p>
+                    <hr>
+                    <p class="fio"></p>
                     <?php get_sidebar();?>
 				</div>
 			</div>
@@ -42,5 +49,4 @@ get_header();
 		</div>		
 	</div><!-- main -->
 <?php
-//get_sidebar();
 get_footer();

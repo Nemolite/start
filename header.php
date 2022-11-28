@@ -19,8 +19,10 @@
 
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class();?> >
-<?php wp_body_open(); ?>
+<?php //wp_body_open(); ?>
+
 <header class="header">
 		<div class="header-content navbar-fixed-top">
 			<nav class="navbar navbar-default">
