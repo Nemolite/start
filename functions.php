@@ -190,4 +190,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
+/**
+ * Register Custom Navigation Walker
+ */
+require_once get_template_directory() . '/wp-bootstrap-navwalker/class-wp-bootstrap-navwalker.php';
+
+register_nav_menus( array(
+    'top_menu' => __( 'Главное меню', 'start' ),
+	'auth_menu' => __( 'Авторизация', 'start' ),
+) );
 

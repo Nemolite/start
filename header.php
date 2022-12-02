@@ -24,7 +24,7 @@
 <?php //wp_body_open(); ?>
 
 <header class="header">
-		<div class="header-content navbar-fixed-top">
+	<div class="header-content navbar-fixed-top">
 			<nav class="navbar navbar-default">
 				<div class="container-fluid">
 				 
@@ -36,56 +36,36 @@
 					  <span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand cst-brand" href="#">nemolite</a>
-				  </div>
-			  
+				  </div>		  
 				  
 				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<!-- PHP -->
-					<ul class="nav navbar-nav">					  					  
-					  <li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PHP<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-						  <li><a href="#">PHP</a></li>						  
-						  <li role="separator" class="divider"></li>
-						  <li><a href="#">WordPress</a></li>
-						  <li role="separator" class="divider"></li>
-						  <li><a href="#">Laravel</a></li>
-						</ul>
-					  </li>
-					</ul>
 					
-					<!-- Python -->
-					<ul class="nav navbar-nav">					  					  
-						<li class="dropdown">
-						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Python<span class="caret"></span></a>
-						  <ul class="dropdown-menu">
-							<li><a href="#">Python</a></li>							
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Django</a></li>
-							
-						  </ul>
-						</li>
-					  </ul>
-
-					<!-- Аутентификация -->
-					<ul class="nav navbar-nav navbar-right">	  
-					  <li class="dropdown">
-						<a href="#" 
-						   class="dropdown-toggle" 
-						   data-toggle="dropdown" 
-						   role="button" 
-						   aria-haspopup="true" 
-						   aria-expanded="false">Аутентификация<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-						  <li><a href="#">Вход</a></li>
-						  <li><a href="#">Регистрация</a></li>						  
-						  <li role="separator" class="divider"></li>
-						  <li><a href="#">Если вы забыли пароль?</a></li>
-						</ul>
-					  </li>
-					</ul>
-					
+					<!-- Главное меню-->
+					  <?php 
+							wp_nav_menu( array(
+								'menu' => 'top_menu',
+								'theme_location'  => 'top_menu', 
+								'depth' =>  2,
+								'container' => false,
+								'strcasecmp' => 1,
+								'menu_class' => 'nav navbar-nav',
+								'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+								'walker' => new wp_bootstrap_navwalker())
+							);
+						?>
+						<!-- Меню для регистрации, авторизации-->
+						<?php 
+							wp_nav_menu( array(
+								'menu' => 'top_menu',
+								'theme_location'  => 'auth_menu', 
+								'depth' =>  2,
+								'container' => false,
+								'strcasecmp' => 1,
+								'menu_class' => 'nav navbar-nav navbar-right',
+								'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+								'walker' => new wp_bootstrap_navwalker())
+							);
+						?>	
 						<!-- Поиск -->
 						<form class="navbar-form navbar-right">
 							<div class="form-group">
@@ -95,7 +75,6 @@
 						</form>	
 				  </div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
-			  </nav>
-			
+			  </nav>			
 		</div>
 	</header>
