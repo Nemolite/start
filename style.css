@@ -116,6 +116,32 @@ body.admin-bar #wrapper {margin-top: 145px;}
 	font-style: normal;
 	color: #fff; 
 }
+.title-my-blog {
+	cursor: pointer;
+}
+.my-blog {
+	display: none;
+}
+
+.onclose::after {
+	content: "\2039";
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: right;
+	color: #fff;
+	transform: rotate(-90deg);
+} 
+
+.onopen::after {
+	content: "\203A";
+	display: block;
+	width: 20px;
+	height: 20px;
+	float: right;
+	color: #fff;
+	transform: rotate(-90deg);
+} 
 
 
 /* Адаптация */

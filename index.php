@@ -19,12 +19,14 @@ get_header();
 			<div class="col-sm-4 col-md-3 col-lg-3">
                 
 				<div class="sidebar">
-                    <h3>Мой личный блог</h3>                                    
-                    <img class="avatar" src="<?php echo get_stylesheet_directory_uri();?>/assets/images/avatar.jpg" alt="">
-                    <p class="nickname">Sergey Vushnyakov</p>
-                    <p class="fio">Программист, веб-разработчик</p>
-                    <hr>
-                    <p class="fio"></p>
+                    <h3 class="title-my-blog onclose">Мой личный блог</h3>  
+                    <div class="my-blog">                                  
+                        <img class="avatar" src="<?php echo get_stylesheet_directory_uri();?>/assets/images/avatar.jpg" alt="">
+                        <p class="nickname">Sergey Vushnyakov</p>
+                        <p class="fio">Программист, веб-разработчик</p>
+                        <hr>                    
+                        <p class="fio"></p>
+                    </div>
                     <?php get_sidebar();?>
 				</div>
 			</div>
