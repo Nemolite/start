@@ -98,8 +98,8 @@ body.admin-bar #wrapper {margin-top: 145px;}
 .avatar {
 	display: block;
     clip-path: circle(50%);
-    height: 250px;
-    width: 250px;
+    height: 80%;
+    width: 80%;
     margin: 20px auto;
     background-color: #fff;
 }
@@ -142,6 +142,11 @@ body.admin-bar #wrapper {margin-top: 145px;}
 	color: #fff;
 	transform: rotate(-90deg);
 } 
+
+.sidebar-info {
+	width: 100%;
+	min-height: 300px;
+}
 
 
 /* Адаптация */

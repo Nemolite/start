@@ -28,16 +28,19 @@ get_header();
                         <p class="fio"></p>
                     </div>
                     <?php get_sidebar();?>
+                    <div class="sidebar-info">
+                        
+                    </div>
 				</div>
 			</div>
 			<div class="col-sm-8 col-md-9 col-lg-9">
 				<div class="main-content">				
-                <main id="primary" class="site-main">
+               
                     <?php
                     if ( have_posts() ) :                
                        
                         while ( have_posts() ) :
-                            the_post();                          
+                            the_post();                                                                                
                             get_template_part( 'template-parts/content', get_post_type() );
                         endwhile;
                         the_posts_navigation();
@@ -45,7 +48,7 @@ get_header();
                         get_template_part( 'template-parts/content', 'none' );
                     endif;
                     ?>
-                    </main><!-- #main -->
+            
 				</div>
 			</div>
 		</div>		
