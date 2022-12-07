@@ -200,3 +200,9 @@ register_nav_menus( array(
 	'auth_menu' => __( 'Авторизация', 'start' ),
 ) );
 
+/**
+ * Виджет для постов (всех) в сайтбаре
+ */
+require get_template_directory() . '/inc/sidebar-postes.php';
+
+

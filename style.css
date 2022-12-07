@@ -148,6 +148,23 @@ body.admin-bar #wrapper {margin-top: 145px;}
 	min-height: 300px;
 }
 
+/**
+ * Вывод постов в сайтбаре
+ *//
+.sidebar-postaes {
+	width: 100%;
+
+}
+
+.posts-item-title{
+   color: #fff;
+}
+
+.posts-item-content{
+	color: #37373D;
+	font-size: 12px;
+ }
+
 
 /* Адаптация */
 
