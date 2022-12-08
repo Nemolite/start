@@ -9,23 +9,43 @@
 
 get_header();
 ?>
+<div class="main">
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-3">
+                
+				<div class="sidebar">
+                    <h3 class="title-my-blog onclose">Мой личный блог</h3>  
+                    <div class="my-blog">                                  
+                        <img class="avatar" src="<?php echo get_stylesheet_directory_uri();?>/assets/images/avatar.jpg" alt="">
+                        <p class="nickname">Sergey Vushnyakov</p>
+                        <p class="fio">Программист, веб-разработчик</p>
+                        <hr>                    
+                        <p class="fio"></p>
+                    </div>
+                    <?php get_sidebar();?>
+                    <div class="sidebar-info">
+                        
+                    </div>
+				</div>
+			</div>
+			<div class="col-sm-8 col-md-9 col-lg-9">
+				<div class="main-content">
 
-	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 			
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				the_archive_title( '<h1 class="page-title">Статьи по теме  ', '</h1>' );
+				//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post();
+				the_post();	
 
 				/*
 				 * Include the Post-Type-specific template for the content.
@@ -44,9 +64,10 @@ get_header();
 
 		endif;
 		?>
-
-	</main><!-- #main -->
-
+</div>
+			</div>
+		</div>		
+	</div><!-- main -->
 <?php
 get_sidebar();
 get_footer();

@@ -24,7 +24,7 @@ class postesWidget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		?>             
         <div class="sidebar-postaes">
-            <h3>Последние посты</h3>
+            <h3>Новые статьи</h3>
             <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;	
             $args_post = array(   

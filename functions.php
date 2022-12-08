@@ -205,4 +205,11 @@ register_nav_menus( array(
  */
 require get_template_directory() . '/inc/sidebar-postes.php';
 
+/**
+ * Удаление слова Рубрика в категориях
+ */
+add_filter( 'get_the_archive_title', function( $title ){
+	return preg_replace('~^[^:]+: ~', '', $title );
+});
+
 
