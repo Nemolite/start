@@ -150,12 +150,15 @@ body.admin-bar #wrapper {margin-top: 145px;}
 
 /**
  * Вывод постов в сайтбаре
- *//
+ */
 .sidebar-postaes {
 	width: 100%;
 
 }
 
+.posts-item {
+margin-left: 40px;
+}
 .posts-item-title{
    color: #fff;
 }

@@ -197,7 +197,7 @@ require_once get_template_directory() . '/wp-bootstrap-navwalker/class-wp-bootst
 
 register_nav_menus( array(
     'top_menu' => __( 'Главное меню', 'start' ),
-	'auth_menu' => __( 'Авторизация', 'start' ),
+	'auth_menu' => __( 'Авторизация', 'start' ),	
 ) );
 
 /**
