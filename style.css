@@ -94,6 +94,13 @@ body.admin-bar #wrapper {margin-top: 145px;}
 	padding: 20px;
 }
 
+.footer-content-right a {
+	color: #37373D;
+    font-size: 14px;
+}
+
+
+
 /* Изображение в сайт баре */
 .avatar {
 	display: block;

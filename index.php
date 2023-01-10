@@ -25,7 +25,7 @@ get_header();
                     <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/avatar.jpg" alt="">
                     <p class="nickname">Sergey Vushnyakov</p>
                     <p class="fio">Программист, веб-разработчик</p>
-                    <hr>
+
                     <p class="fio"></p>
                 </div>
                 <hr>
