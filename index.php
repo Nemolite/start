@@ -21,6 +21,7 @@ get_header();
 
             <div class="sidebar">
                 <h3 class="title-my-blog onclose">Обо мне</h3>
+				
                 <div class="my-blog">
                     <img class="avatar" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/avatar.jpg" alt="">
                     <p class="nickname">Sergey Vushnyakov</p>
@@ -28,6 +29,7 @@ get_header();
 
                     <p class="fio"></p>
                 </div>
+				
                 <hr>
                 <?php get_sidebar(); ?>
                 <div class="sidebar-info">

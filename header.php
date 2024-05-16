@@ -35,7 +35,11 @@
 					  <span class="icon-bar"></span>
 					  <span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand cst-brand" href="<?php echo home_url();?>">nemolite</a>
+					<a class="navbar-brand cst-brand" href="<?php echo home_url();?>">
+					<?php
+					echo esc_html( 'nemolite' );
+					?>
+					</a>
 				  </div>		  
 				  
 				  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -71,7 +75,11 @@
 							<div class="form-group">
 							<input type="text" class="form-control" placeholder="Что искать?">
 							</div>
-							<button type="submit" class="btn btn-default">Поиск по сайту</button>
+							<button type="submit" class="btn btn-default">
+							<?php
+								echo esc_html( 'Поиск по сайту' );
+							?>
+							</button>
 						</form>	
 				  </div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->

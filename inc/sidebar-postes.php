@@ -28,7 +28,11 @@ class postesWidget extends WP_Widget
     {
 ?>
         <div class="sidebar-postaes">
-            <h3>Из последних:</h3>
+            <h3>
+			<?php
+				echo esc_html( 'Публикации:' );
+			?>
+			</h3>
             <hr>
             <?php
             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -51,7 +55,12 @@ class postesWidget extends WP_Widget
                             echo $trimmed_content_post;
                             ?>
                         <p>
-                        <p><span>Свежость:</span>
+                        <p>
+						<span>
+						<?php
+							echo esc_html( 'Дата публикации:' );
+						?>						
+						</span>
                             <?php
                             echo get_the_date();
                             ?>
@@ -65,7 +74,7 @@ class postesWidget extends WP_Widget
             <?php
                 wp_reset_postdata();
             } else
-                echo 'Постов нет.';
+                echo esc_html( 'Нет публикаций' );
             ?>
         </div>
     <?php
