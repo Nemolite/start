@@ -30,7 +30,7 @@ class postesWidget extends WP_Widget
         <div class="sidebar-postaes">
             <h3>
 			<?php
-				echo esc_html( 'Публикации:' );
+				echo esc_html( 'Поток задач:' );
 			?>
 			</h3>
             <hr>
@@ -58,11 +58,20 @@ class postesWidget extends WP_Widget
                         <p>
 						<span>
 						<?php
-							echo esc_html( 'Дата публикации:' );
+							echo esc_html( 'Дата постановки задачи:' );
 						?>						
 						</span>
                             <?php
                             echo get_the_date();
+                            ?>
+                        </p>
+                        <span>
+						<?php
+							echo esc_html( 'Время постановки задачи:' );
+						?>						
+						</span>
+                            <?php
+                            echo get_post_time('H:i');
                             ?>
                         </p>
                     </div>
